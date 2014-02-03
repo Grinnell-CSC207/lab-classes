@@ -43,7 +43,7 @@ public class Fraction
    * 
    * Warning! Not yet stable.
    */
-  public Fraction (BigInteger num, BigInteger denom) throws Exception
+  public Fraction (BigInteger num, BigInteger denom) 
   {
     this.num = num;
     this.denom = denom;
@@ -54,7 +54,7 @@ public class Fraction
    * 
    * Warning! Not yet stable.
    */
-  public Fraction (int num, int denom) throws Exception
+  public Fraction (int num, int denom) 
   {
     this.num = BigInteger.valueOf (num);
     this.denom = BigInteger.valueOf (denom);
@@ -89,14 +89,7 @@ public class Fraction
     resultNumerator = (this.num.multiply(addMe.denom)).add(addMe.num.multiply(this.denom));
 
     // Return the computed value
-    try 
-      {   
-        return new Fraction(resultNumerator, resultDenominator);
-      }
-    catch (Exception e)
-      {
-        return null;
-      } // generic Exception
+    return new Fraction(resultNumerator, resultDenominator);
   }// add(Fraction)
 
   /**
