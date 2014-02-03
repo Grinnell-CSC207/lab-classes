@@ -105,6 +105,11 @@ public class Fraction
   public String
     toString ()
   {
+    // Special case: It's zero
+    if (this.num.equals(BigInteger.ZERO)) {
+      return "0";
+    } // if it's zero
+
     // Lump together the string represention of the numerator,
     // a slash, and the string representation of the denominator
     // return this.num.toString().concat("/").concat(this.denom.toString());
